@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essence Cafe</title>
+
+    <!--LeafLet CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Navigation -->
+        <nav class="main-nav"> 
+
+        <!-- Logo -->
+        <img
+        src="images/logo2.image.png"
+        width="150"
+        alt="Essence Cafe Logo"
+        class="logo-image"> 
+
+            <ul class="main-nav ul">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="aboutus.html">About Us</a><li>   
+              <li><a href="menu.html">Menu</a><li>  
+              <li><a href="contact&location.html">Contact/Location</a><li>
+              <li><a href="review.html">Review</a><li>
+            </ul>
+
+            <!-- Hamburger Menu Button -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <br><br>
+    </header>
+    <hr>
+    <main>
+        <!-- Contact Details -->
+        <section id="contact-details">
+            <article class="card">
+                <h2> Phone Number </h2>
+
+                <p> 061 212 9783</p>
+
+
+                <h2> Email Address </h2>
+
+                <p> info@essencecafe.co.za </p>
+
+                <h2> Address </h2>
+
+                <p> The Square, 4 Chatterton Road, Town Hill, Pietermaritzburg, 3201.</p>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.4760872090346!2d30.374139675817386!3d-29.589843475155654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6bc97b5b48767%3A0x5b76feed35fbaef8!2sEssence%20Cafe%20%26%20Grill!5e0!3m2!1sen!2sza!4v1793461185896!5m2!1sen!2sza" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+
+
+            </article>
+        </section>
+
+        <section id="query">
+            <article class="card">
+                <form id="contact-form" class="contact-form">
+
+                    <h2>Contact Us</h2>
+                    
+                    <!-- Full Name -->
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname">
+                    <span id="nameError" class="error"></span>
+                    <br> 
+
+                    <!-- Email Address-->
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email">
+                    <span id="emailError" class="error"></span>
+                    <br> 
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </article>
+        </section>
+
+
+     
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Essence Cafe. All rights reserved
+        <br>
+        <p> Connect with us </p>
+        <ul>
+            <!-- Social Media Links-->
+            <li><a
+                    href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fessencecafepmb%2F%3Fhl%3Den&is_from_rle">
+                    Instagram </a> </li>
+            <br>
+            <li><a href="https://www.facebook.com/EssencePMB/"> Facebook </a> </li>
+        </ul>
+
+    </footer>
+
+    <script src="JS/script.js"></script>
+
+   
+
+
+
+
+</body>
+</html>

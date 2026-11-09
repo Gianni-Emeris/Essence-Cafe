@@ -1,0 +1,890 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: black;
+    background-color: #f4f4f4;
+    
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+}
+
+/* Typography */
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+   
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+}
+
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+p{
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+
+}
+
+header{
+    position: relative;
+    text-align: center;
+    background-color: #B87333;
+    padding: 3rem 1rem;
+    z-index: 999;
+ 
+
+
+}
+
+header p{
+    max-width: 300px;
+    margin: 1rem auto;
+    
+}
+
+ul{
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+
+}
+
+li{
+    margin-bottom: 0.5rem;
+
+}
+
+/* Navigation */
+.main-nav{
+    display: flex;
+    background-color: #B87333;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-height: none;
+}
+
+.main-nav h2{
+    display: none;
+
+}
+
+.main-nav ul{
+    list-style: none;
+    display: flex;
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.main-nav a{
+    margin: 0 30px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0.6rem 1.2rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+
+}
+
+.main-nav :hover{
+    color: white;
+}
+
+.main-nav a:active{
+    transform: scale(0.98);
+
+
+}
+
+/* Hide hamburger by default on desktop */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+/* Section */
+
+section{
+    background-color: white;
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+
+}
+
+section h2{
+    color: black;
+    margin-bottom: 0.5rem;
+
+}
+
+/* Cards */
+
+.card{
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.menu-card{
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    /* Animation for card hover*/
+    transition: transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Raise card slighty on hover */
+.menu-card:hover{
+    transform: translateY(-5px);
+}
+
+
+/* Layout Structure */
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    /* Improvement 1: Smooth hover transition */
+    transition: transform 0.3s ease,
+    opacity 0.3s ease;
+    
+}
+
+/* Hover Effect */
+.gallery img:hover{
+    opacity: 0.8;
+
+    /* Increase the large size by 5% */
+    transform: scale(1.05);
+
+}
+
+/*LightBox Background */
+.lightbox{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+
+    /* Keep the lightbox above other content */
+    z-index: 1000;
+             
+}
+
+/* Large Image */
+.lightbox img{
+    max-width: 80%;
+    max-height: 80%;
+
+        /* Improvement 2: Zoom in animation */
+        animation: zoomIn 0.3s ease;
+
+        }
+
+        /* Zoom animation */
+        @keyframes zoomIn
+        {
+            /*Starting Position */
+            from{
+                transform: scale(0.5);
+                opacity: 0;
+
+            }
+
+            to{
+                /*Final Position */
+                transform: scale(1);
+                opacity: 1;
+            }
+
+        }
+
+        /* Close Button */
+        .close{
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: black;
+            font-size: 40px;
+            cursor: pointer;
+
+        }
+
+        /* Close button Hover effect */
+        .close:hover{
+            color:#B87333;
+
+    }
+
+.accordion-container{
+    max-width: 1500px;
+    margin: auto;
+   
+
+}
+
+.accordion{
+    background-color: #B87333;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-weight: 700 ;
+    font-size: 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+}
+
+.accordion:hover{
+    background-color: black;
+    transition: background 0.3s ease, transform 0.2s ease;
+    
+
+}
+
+.accordion.active{
+    background-color: #B87333;
+
+}
+
+.panel{
+    background-color: white;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease,
+    padding 0.3s ease;
+
+}
+
+.panel.open{
+    padding: 15px 18px;
+
+}
+
+.panel p{
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+
+}
+
+
+#review-images{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#review-images img{
+    width: 250px;
+    height: auto;
+}
+
+.view-button{
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem auto;
+    
+}
+
+.reserve-button{
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem auto;
+
+}
+
+.order-button{
+    text-align: center;
+    margin: 1rem auto;
+
+}
+
+.rating-form input,
+.rating-form textarea{
+    width: 50%;
+    margin-top: 0.5rem;
+    border: 1px solid #B87333;
+    font-size: 1rem;
+
+}
+
+.rating-button{
+    max-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem auto;
+    
+}
+
+/* Map Design */
+iframe{
+    height: 500px;
+    width: 100%;
+    border: 3px solid white;
+    border-radius: 12px;
+    box-shadow: 0.5px 20px
+    rgba(0, 0, 0, 0.15);
+
+    /* Entrance Animation */
+    animation: slideUp 1s ease-out;
+
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea{
+    width: 50%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    color-scheme: lightgray;
+    outline: 0.15rem solid #B87333;
+
+}
+
+.enquiry-form input,
+.enquiry-form textarea{
+    width: 50%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus{
+    color-scheme: lightgray;
+    outline: 0.15rem solid #B87333;
+
+}
+
+.search-section input,
+.search-section textarea{
+    width: 50%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+
+}
+
+.search-section input:focus,
+.search-section textarea:focus{
+    color-scheme: lightgray;
+    outline: 0.15rem solid #B87333;
+
+}
+
+
+
+.error{
+    color: red;
+    font-size: 0.9rem;
+    display: block;
+
+}
+.submit-btn{
+    padding: 10px;
+    background-color: #B87333;
+    border: none;
+    width: auto ;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 0.1rem 0.3
+
+}
+
+.submit-btn:hover{
+    background-color: black;
+    color: #f4f4f4;
+    transition: 0.5s ease;
+
+}
+
+input[type="text"], input[type="email"]{
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+}
+
+
+/* Visual */
+
+section{
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.6rem  
+    rgba(0,0,0,0.1);
+
+}
+
+section h2{
+    border-bottom: 0.15rem solid #B87333;
+    padding-bottom: 0.5rem;
+
+}
+
+.card{
+    background-color:#f9f9f9;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.3rem
+    rgba(0,0,0,0.88);
+
+}
+
+
+.rating-form input,
+.rating-form textarea{
+    width: 50%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+/* Footer */
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 2rem
+
+}
+
+footer a{
+    color: white;
+}
+
+footer :hover{
+    color: #B87333;
+}
+
+
+
+/* Pseudo-Classes */
+
+.main-nav a:hover{
+    background-color: black;
+    border-radius: 0.3rem;
+}
+
+.main-nav a:focus{
+    outline: 0.3rem solid #B87333;
+
+}
+
+.main-nav a:active{
+    background-color: #B87333;
+}
+
+.rating-form input:focus,
+.rating-form textarea:focus{
+    color-scheme: lightgray;
+    outline: 0.15rem solid #B87333;
+}
+
+
+.view-button{
+    position: absolute;
+    top: 75%;
+    padding: 10px;
+    background-color: #B87333;
+    border: none;
+    width: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 0.1rem 0.3rem
+    rgba(0,0,0,0.88);
+    
+
+
+
+}
+
+.view-button:hover{
+    background-color: black;
+    color: #f4f4f4;
+    transition: 0.5s ease;
+
+}
+
+
+
+.order-button{
+    padding: 10px;
+    background-color: #B87333;
+    border: none;
+    width: 600px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 0.1rem 0.3rem
+    rgba(0,0,0,0.88);
+    
+
+}
+
+.order-button:hover{
+    background-color: black;
+    color: #f4f4f4;
+    transition: 0.5s ease;
+
+}
+
+.rating-button{
+    padding: 20px ;
+    background-color: #B87333;
+    border: none;
+    max-width: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 0.1rem 0.3rem
+    rgba(0,0,0,0.88);
+
+
+}
+
+.rating-button:hover{
+    background-color: black;
+    color: #f4f4f4;
+    transition: 0.5s ease;
+}
+
+
+/* Responsive image */
+.logo-image{
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    margin-left: 0;
+    display: block;
+
+ 
+}
+
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-image{
+    background: url("../images/essence.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    filter: brightness(0.5);
+    margin-bottom: 50px;
+    
+}
+
+
+.hero-logo{
+    width: 500px;
+    margin-bottom: 20px;
+ 
+ 
+}
+/* Tablet responsiveness */
+@media (max-width: 900px){
+    #home-images{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.main-nav ul{
+    flex-wrap: wrap;
+    gap: 0.8rem;
+
+}
+
+main{
+    width: 92%;
+
+}
+
+h1{
+    font-size: 2.2rem;
+
+}
+
+h2{
+    font-size: 1.8rem;
+
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px){
+    body{
+        font-size: 0.95rem;
+
+    }
+
+    header{
+        padding: 2rem 1rem;
+
+    }
+
+    #home-image img{
+        width: 10rem;
+    }
+
+    .profile-image{
+        width: 10rem;
+
+    }
+
+    .main-nav ul{
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 0.5rem;
+
+    }
+
+    main{
+        width: 95%;
+        padding: 1rem 0;
+
+    }
+    section{
+        padding: 1.2rem;
+
+    }
+
+    h1{
+        font-size: 1.8rem;
+
+    }
+
+    h2{
+        font-size: 1.5rem;
+
+    }
+
+    h3{
+        font-size: 1.2rem;
+
+    }
+
+}
+
+    
+
+
+/* Phones */
+@media (max-width: 768px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block; 
+        cursor: pointer;
+    }
+
+    .hero-logo {
+        width: 60%;
+        max-width: 350px;
+        
+    }
+
+    .view-button {
+        position: relative;
+        width: 150px;
+        max-width: 250px;
+        margin: 20px auto;
+        margin-top: -20px;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        height: 100%;
+    }
+
+    
+
+
+    /* Hamburger Animation into 'X' */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    
+    .main-nav ul {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #B87333;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        padding: 2rem 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .main-nav ul.active {
+        left: 0; 
+    }
+}
+
+
+
+
+
+    
+
+
+
+
+

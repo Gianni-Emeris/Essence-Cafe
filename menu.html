@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essence Cafe </title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+     <header class="header">
+        <!-- Navigation -->
+        <nav class="main-nav"> 
+
+        <!-- Logo -->
+        <img
+        src="images/logo2.image.png"
+        width="150"
+        alt="Essence Cafe Logo"
+        class="logo-image"> 
+
+            <ul class="main-nav ul">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="aboutus.html">About Us</a><li>   
+              <li><a href="menu.html">Menu</a><li>  
+              <li><a href="contact&location.html">Contact/Location</a><li>
+              <li><a href="review.html">Review</a><li>
+            </ul>
+
+            <!-- Hamburger Menu Button -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <br><br>
+        
+    </header>
+
+    <!--Main Content -->
+    <main>
+        
+        <!-- Search Section -->
+        <section class="search-section">
+          <input type="text" id="searchInput" placeholder="Search for menu item" aria-label="Search for Menu Items">
+        </section>
+
+            
+        <!-- Starter -->
+        <section id="starter">
+            <div class="card-container">
+
+                <!-- Starter -->
+                <article class="menu-card">
+                    <h2> Starter: </h2>
+                    <h3> Chicken and Bacon Ceasar Salad </h3>
+
+                    <img src="images/salad.image.jpg" width="400" alt="Chicken Salad" class="chicken-image">
+
+                    <p>
+                       Chicken, bacon, cherry tomatoes, cucumber topped with pamesian shavings.
+                    </p>
+
+                    <p>
+                       <strong>R76</strong>
+                    </p>
+
+                    <!-- Order Button -->
+                    <a href="" class="order-button"> Order </a>
+
+                </article>
+ 
+                <!-- Starter -->
+                <article class="menu-card">
+                    <h2> Starter: </h2>
+                    <h3> Crispy Chicken Strips </h3>
+
+                    <img src="images/chicken.strips.jpg" width="400" alt="Chicken Strips" class="strips-image">
+
+                    <p>
+                       Crispy fried chicken strips in our fresh herb seasoning served with mild harissa mayo.
+                    </p>
+
+                    <p>
+                      <strong>R74</strong>
+                     </p>
+
+                    <!-- Order Button -->
+                    <a href="" class="order-button"> Order </a>
+
+                </article> 
+
+                <article class="menu-card">
+                    <h2> Main: </h2>
+                    <h3> Classic Burger </h3>
+
+                    <img src="images/burger.image.jpg" width="400" alt="Classic Burger" class="burger2-image">
+
+                    <p>
+                       Tomato, cucumber, lettuce, crispy onion rings and burger sauce.
+                    </p>
+
+                    <p>
+                       <strong>R80</strong>
+                    </p>
+
+                    <!-- Order Button -->
+                    <a href="" class="order-button"> Order </a>
+                </article>
+
+                <article class="menu-card">
+                    <h2> Main: </h2>
+                    <h3> Fillet Steak </h3>
+
+                    <img src="images/steak.jpg" width="400" alt="Steak" class="steak-image">
+ 
+                    <p>
+                       Grilled in our secret boasting and served with your choice of chips, rice, salad, roasted mixed veg or mash.
+                    </p>
+
+                    <p>
+                       <strong>R218</strong>
+                    </p>
+
+                    <!-- Order Button -->
+                    <a href="" class="order-button"> Order </a>
+                </article>
+
+
+                <article class="menu-card">
+                    <h2> Dessert: </h2>
+                    <h3> Chocolate Brownies </h3>
+
+                    <img src="images/brownie.image.jpg" width="400" alt=" Chocolate Brownies" class="brownie-class">
+
+                    <p>
+                       Our Brownies are famous. Try one and find out why. Served with cream or ice cream.
+                    </p>
+
+                    <p>
+                       <strong>R34</strong>
+                    </p>
+
+                    <!-- Order Button -->
+                    <a href="" class="order-button"> Order </a>
+                </article>
+
+                <article class="menu-card">
+                    <h2> Dessert: </h2>
+                    <h3> Chocolate Volcano </h3>
+
+                    <img src="images/chocolate.volcano.jpg" width="400" alt=" Chocolate Volcano" class="volcano-class">
+
+                    <p>
+                       A warm rich souffle made with fine chocolate and an oozing chocolate center.
+                    </p>
+
+                    <p>
+                       <strong>R79</strong>
+                    </p>
+
+                    <!-- Order Button -->
+                    <a href="" class="order-button"> Order </a>
+                </article>
+
+            </div>
+
+            <!-- No results Message -->
+             <p id="noResults" hidden>
+            No Menu Item found
+            </p>
+        </section>
+
+        
+        <section id="enquiry-section">
+            <article class="card">
+                <form id="enquiry-form" class="enquiry-form">
+
+                    <h2> Product Enquiry</h2>
+
+                    <!-- Full Name -->
+                    <label for="fullName2">Full Name:</label>
+                    <input type="text" id="fullname2" name="fullname2">
+                    <span id="nameError2" class="error"></span>
+                    <br> 
+
+                    <!-- Email Address -->
+                    <label for="email2">Email Address:</label>
+                    <input type="email" id="email2" name="email2">
+                    <span id="emailError2" class="error"></span>
+                    <br> 
+
+                    <!-- Select Product -->
+                    <label for="selectProduct">Select Product:</label>
+                    <select id="selectProduct" name="selectProduct">
+                        <option value="" >Choose the menu item</option>
+                        <option value="menuItem1">Chicken and Bacon Ceasar Salad</option>
+                        <option value="menuItem2">Crispy Chicken Strips</option>
+                        <option value="menuItem3">Classic Burger</option>
+                        <option value="menuItem4">Fillet Steak</option>
+                        <option value="menuItem5">Chocolate Brownies</option>
+                        <option value="menuItem6">Chocolate Volcano</option>
+                    </select>
+                    <span id="productError" class="error"></span>
+                    <br><br>
+  
+                    <!-- Enquiry -->
+                    <label for="enquiry">Enquiry:</label>
+                    <input type="text" id="enquiryInput"name="enquiry">
+                    <span id="enquiryError" class="error"></span>
+                    <br><br>
+ 
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <br>
+
+                    <!-- Response -->
+                    <label for="response">Response:</label>
+                    <p id="responseBox">Response will appear here</p>
+
+                </form>
+            </article>
+        </section>
+
+
+    </main>
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Essence Cafe. All rights reserved
+        <br>
+        <p> Connect with us </p>
+        <ul>
+            <!-- Social Media Links-->
+            <li><a
+                    href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fessencecafepmb%2F%3Fhl%3Den&is_from_rle">
+                    Instagram </a> </li>
+            <br>
+            <li><a href="https://www.facebook.com/EssencePMB/"> Facebook </a> </li>
+        </ul>
+
+    </footer>
+
+    <script src="JS/script.js"></script>
+
+</body>
+
+</html>

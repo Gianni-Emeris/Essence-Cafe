@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title> Essence Cafe. The best coffee shop in Pietermaritzburg</title>
+
+    <!-- Meta Description 
+    The meta description is short summary of what 
+    The webpage is about. 
+
+    Search engines such as google may display the webpage title in search results.
+    A good description helps users understand what they can expect form the website.
+
+    In our project, the description will explain that users can interact with a leaflet map, 
+    zoom in and out and view GPS co-ordinates.
+
+    -->
+
+    <meta name="description" 
+    content="Essence Cafe, A cozy spot with incredible food crafted from local goodness. Its not just a meal, its an experience. Relax in a stylish setting where good taste meets comfort. The target audience is anyone that wants delicious food with a cosy experience.">
+
+    <!-- Meta Keywords
+     
+    Keywords are words or phrases related to the content of the webpage.
+    
+    In this example our keywords describe:
+    St Charles College
+    PMB
+    Leaflet mapping Library 
+    GPS Co-ordinates 
+    Web Dev techniologies 
+    
+    Historically search engines used keywords to help understand webpage content -->
+
+    <meta name="keywords" 
+    content="Essence Cafe, Coffee Shop, Food, Starters, Mains, Desserts, 
+    Burgers, Pizzas, Breakfast, Local Shop, Pietermaritzburg, South Africa, ">
+
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <!-- Website Author 
+    This tag identifies the person or organisation responsible for 
+    creating the webpage. 
+    
+    The author info is stored as metadata and is not normally visible on 
+    the webpage. -->
+
+    <meta name="author"
+    content="Gianni Steyn">
+
+    <!-- Search Engine Instructions 
+    The robots meta tag provides instructions to search engine crawlers
+
+    index: 
+    Allows search Engines to include the webpage in their search results. 
+
+    follow: 
+    Allows searchh engine crawlers to follow the links found on the webpage
+
+    These are generally the default behaviours, 
+    so this tag is not strictly required -->
+
+    <meta name="robots" content="index,follow">
+
+</head>
+<body>
+    
+    <header class="header">
+       
+        <!-- Navigation -->
+        <nav class="main-nav"> 
+
+
+
+        <!-- Logo -->
+        <img
+        src="images/logo2.image.png"
+        width="150"
+        alt="Essence Cafe Logo"
+        class="logo-image"> 
+
+        
+
+            <ul class="main-nav ul">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="aboutus.html">About Us</a><li>   
+              <li><a href="menu.html">Menu</a><li>  
+              <li><a href="contact&location.html">Contact/Location</a><li>
+              <li><a href="review.html">Review</a><li>
+            </ul>
+
+
+            <!-- Hamburger Menu Button -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <br><br>
+        
+    
+
+    </header>
+
+    <!-- Main Content-->
+    
+
+    <main>
+
+        <div class="hero-image">
+
+            <!-- Logo -->
+            <img
+                src="images/download (1).png"
+                alt="White Logo"
+                 class="hero-logo">
+
+            <!-- View Menu Button -->
+            <a href="menu.html" class="view-button"> View Menu</a>
+
+        </div>
+
+
+    
+        <section id="home-images">
+            <h2> Gallery </h2>
+            <div class="gallery">
+            <!-- Images -->
+            <img                               
+            src="images/burger.image.jpg"      
+            width="300"
+            alt="Burger"
+            class="burger-image"
+            onclick="openLightBox(this.src)">    
+            
+            <img
+            src="images/pizza.image.jpg"      
+            width="300"
+            alt="Pizza"
+            class="pizza-image"
+            onclick="openLightBox(this.src)"> 
+
+            
+            <img
+            src="images/breakfast.image.jpg"
+            width="300"
+            alt="Breakfast 1"
+            class="breakfast1-image"
+            onclick="openLightBox(this.src)">
+
+            <img
+            src="images/breakfast2.image.jpg"
+            width="300"
+            alt="Breakfast 2"
+            class="breakfast2-image"
+            onclick="openLightBox(this.src)">
+            </div>
+        </section>
+
+        <!-- LightBox -->
+        <div class="lightbox" 
+        id="lightbox" 
+        role="dialog"
+        aria-modal="true"
+        aria-label="Enlarged Image"
+        onclick="closeLightBox()">
+
+           <!--Close Button-->
+           <button 
+           class="close"
+           type="button"
+           aria-label="Close image"
+           onclick="closeLightBox()">
+            &times;
+           </button>
+        
+        
+
+        <!-- Enlarged Image -->
+        <img id="lightboxImage"
+        src=""
+        alt="Enlarged image"
+        onclick="event.stopPropagation()">
+
+    </div>
+
+    <!-- Trading Hours -->
+        <section id="trading-hours">
+            <article class="card">
+                <h2> Trading Hours </h2>
+                <ul>
+                    <li> Sunday 8:00 AM - 5:00 PM </li>
+                    <li> Monday 7:30 AM - 5:00 PM </li>
+                    <li> Tuesday 7:30 AM - 9:00 PM </li>
+                    <li> Wednesday 7:30 AM - 9:00 PM </li>
+                    <li> Thursday 7:30 AM - 9:00 PM </li>
+                    <li> Friday 7:30 AM - 9:00 PM </li>
+                    <li> Saturday 7:30 AM - 9:00 PM </li>
+                </ul>
+            </article>
+        </section>
+
+         
+    </main>
+
+   <!-- Footer -->
+       <footer>
+            &copy; 2026 Essence Cafe. All rights reserved
+            <br> 
+            <p> Connect with us </p>
+            <ul>
+                <!-- Social Media Links-->
+                <li><a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fessencecafepmb%2F%3Fhl%3Den&is_from_rle"> Instagram </a> </li>
+                <br>
+                <li><a href="https://www.facebook.com/EssencePMB/"> Facebook </a> </li>
+            </ul>
+            
+       </footer>
+
+       <script src="JS/script.js"> </script>
+       
+</body>
+</html>
